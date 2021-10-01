@@ -40,6 +40,10 @@ class CheckoutSdk::ApiResource
     get("/payments/#{id}/actions")
   end
 
+  def add_instrument(data_object)
+    post_request("/instruments", data_object.data)
+  end
+
   private
 
   def post_request(path, data)
